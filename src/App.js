@@ -10,14 +10,15 @@ import friends from './components/Friends-list/Friends.json';
 import transactions from './components/Transaction/transaction.json';
 
 const App = () => {
+    const { name, tag, location, avatar, stats } = user;
     return (
         <>
             <Profile
-                name={user.name}
-                tag={user.tag}
-                location={user.location}
-                avatar={user.avatar}
-                stats={user.stats}
+                name={name}
+                tag={tag}
+                location={location}
+                avatar={avatar}
+                stats={stats}
             />
 
             <Statistics title="Upload stats" stats={StatisticalData} />

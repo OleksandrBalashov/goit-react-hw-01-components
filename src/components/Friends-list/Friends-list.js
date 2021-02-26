@@ -5,21 +5,21 @@ import styles from './Friends-list.module.css';
 const FriendsList = ({ friends }) => {
     return (
         <ul className={styles.list}>
-            {friends.map(({avatar, name, isOnline, id}) => (
+            {friends.map(({ avatar, name, isOnline, id }) => (
                 <li className={styles.item} key={id}>
-                    {isOnline ? <span className={styles.online}></span> : <span className={styles.offline}></span>}
+                    <span className={isOnline ? styles.online : styles.offline}></span>
                     <img className={styles.avatar} src={avatar} alt={name} width="48" />
                     <p>{name}</p>
                 </li>
 
             ))}
         </ul>
-    )
+    );
 };
 
 FriendsList.defaultProps = {
     avatar: 'https://www.expoelectroseti.ru/TestTest/profile.jpg'
-}
+};
 
 FriendsList.propTypes = {
     friends: PropTypes.arrayOf(PropTypes.shape({
