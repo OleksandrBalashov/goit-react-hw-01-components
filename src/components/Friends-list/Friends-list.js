@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Friends-list.module.css';
 
+
 const FriendsList = ({ friends }) => {
     return (
         <ul className={styles.list}>
